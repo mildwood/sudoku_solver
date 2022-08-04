@@ -1,5 +1,9 @@
 # cubicfox-sudoku
 
+Simple Sudoku solver made in VueJS
+
+The solver algorithm in the Solver.js file is using the https://github.com/robatron/sudoku.js.git project
+
 ## Project setup
 ```
 npm install
