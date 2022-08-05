@@ -12,7 +12,7 @@
     
     <v-row align="center" justify="center">
         <v-col class="d-flex align-center justify-center">
-            <v-card color="grey darken-2" width="600">
+            <v-card color="grey darken-2" class="rounded-xl" width="600">
                 <h3 class="my-2 mx-2 text-center grey--text text--lighten-3">
                     Sudoku megoldó alkalmazás
                 </h3>  

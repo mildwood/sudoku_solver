@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="cyan darken-2"
+      color="teal lighten-2"
       dark
     >
     <v-app-bar-nav-icon class="grey--text text--lighten-2" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
