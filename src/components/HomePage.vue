@@ -21,6 +21,15 @@
                     Ez az alkalmazás azért jött létre, hogy automatikusan megfejtsen sudoku feladványokat, illetve segítsen egy elakadt sudoku folytatásában. Amennyiben követni szeretnéd az app fejlődését iratkozz fel!
                 </h4>
                 <br>
+                <v-row align="center" justify="center">
+                    <v-col class="d-flex align-center justify-center">
+                        <v-btn color="cyan darken-2" @click.prevent="$router.push('/sudoku')">
+                            <v-icon class="mr-2" color="white">mdi-puzzle</v-icon>
+                            <h4 class="white--text">Sudoku</h4>
+                        </v-btn>
+                    </v-col>
+                </v-row>
+                <br>
                 <br>
                 <v-row class="d-flex align-center justify-space-around">
                     <v-col class="d-flex alig-center justify-center" cols="10">

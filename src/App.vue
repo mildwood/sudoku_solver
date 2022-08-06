@@ -6,9 +6,11 @@
       dark
     >
     <v-app-bar-nav-icon class="grey--text text--lighten-2" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <router-link  style="text-decoration: none; color: inherit;" :to="{ name: 'HomePage' }">
       <h3 class="grey--text text--lighten-2 ml-2">
       Sudoku App
     </h3>
+    </router-link>
     
     <v-navigation-drawer
       dark 
