@@ -4,6 +4,8 @@ Simple Sudoku solver made in VueJS 2
 
 The solver algorithm in the Solver.js file is using the https://github.com/robatron/sudoku.js.git project
 
+Demo: https://cubicfox-sudoku.web.app/
+
 ## Project setup
 ```
 npm install
