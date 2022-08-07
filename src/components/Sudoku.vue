@@ -160,7 +160,7 @@ export default {
 			this.checkBlock(row,col,this.sudoku[row][col].value,this.sudoku[row][col].inputType)
 		}	
 	}
-	// Number was possibly cleard
+	// Number was possibly cleared
 	else {	
 		this.countFilledCells()
 		}
@@ -253,9 +253,9 @@ checkBlock(row,col,num,inputType){
 },
 
 countFilledCells(){
-	// Count all the numbers
+	// Count all cells
 	this.filledCellNum = 0
-	// Count machne numbers
+	// Count machine cells
 	this.filledCellNumMachine = 0
 	// Init new localStorage value
 	var tempSudoku = ""
@@ -284,8 +284,8 @@ solvePuzzle(){
 			}
 			else {
 				sudokuString = sudokuString + "."
+				}
 			}
-		}
 		}
 		var result = sudoku_library.sudoku.solve(sudokuString)
 		if(!result){
