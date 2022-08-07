@@ -87,6 +87,7 @@
   </v-form>
 </template>
 
+
 <script>
 import Cell from "./Cell"
 import { v4 as uuidv4 } from 'uuid';
