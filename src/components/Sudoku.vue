@@ -47,7 +47,7 @@
 								<v-row justify="space-around" class="align-center justify-space-between" v-for="z in zObj.num" :key="z.uuid">
         							<v-col class="align-center px-n12 cellColumn" v-for="g in gObj.num" :key="g.uuid">
           								<v-text-field
-										v-mask="'#'"
+										v-mask="sudoku_cell_mask"
 					  					:background-color="!sudoku[(((x-1)*3)+z)-1][(((y-1)*3)+g)-1].value.length ? 'white' : sudoku[(((x-1)*3)+z)-1][(((y-1)*3)+g)-1].wrong === 'true' ? 'red lighten-2' : sudoku[(((x-1)*3)+z)-1][(((y-1)*3)+g)-1].inputType === 'human' ? 'teal lighten-2' : sudoku[(((x-1)*3)+z)-1][(((y-1)*3)+g)-1].inputType === 'machine' ? 'orange lighten-2' : ''"
 					  					@input="modifyCell((((x-1)*3)+z)-1,(((y-1)*3)+g)-1)"
 										v-model="sudoku[(((x-1)*3)+z)-1][(((y-1)*3)+g)-1].value"
@@ -111,6 +111,7 @@ export default {
   			[{value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}],
   			[{value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}, {value:"",inputType: "", wrong: "false"}],
 				],
+			sudoku_cell_mask: [/[1-9]/],
 			cellNum: null,
 			xObj: {uuid: uuidv4(), num:[1,2,3]},
 			yObj: {uuid: uuidv4(), num:[1,2,3]},
@@ -288,6 +289,7 @@ solvePuzzle(){
 				}
 			}
 		}
+		// Get result from solver
 		var result = sudoku_library.sudoku.solve(sudokuString)
 		if(!result){
 			this.$store.commit('setSnackbarMessage', 'Ezt a sudoku-t nem lehet megfejteni!')
