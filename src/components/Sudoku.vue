@@ -289,7 +289,6 @@ solvePuzzle(){
 				}
 			}
 		}
-		// Get result from solver
 		var result = sudoku_library.sudoku.solve(sudokuString)
 		if(!result){
 			this.$store.commit('setSnackbarMessage', 'Ezt a sudoku-t nem lehet megfejteni!')
